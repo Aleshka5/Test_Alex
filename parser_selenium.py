@@ -29,7 +29,7 @@ def parse_the_cite(url):
 
         # Поптыка запроса
         try:
-            # Аунтификация proxy
+            # Аутентификация proxy
             driver = get_chromedriver(use_proxy=True)
             url = url+f'?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start={i}&sz={pagination_size}'
             # Заходим на сайт
