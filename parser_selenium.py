@@ -7,7 +7,7 @@ import numpy as np
 
 from solve_auntithication import get_chromedriver
 
-def parse_the_cite(url):
+def parse_the_cite(base_url):
     """
     Этот парсер работает напрямую с сайтом.
     Его задача - получить все нужные HTML документы из интернета.
@@ -31,7 +31,7 @@ def parse_the_cite(url):
         try:
             # Аутентификация proxy
             driver = get_chromedriver(use_proxy=True)
-            url = url+f'?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start={i}&sz={pagination_size}'
+            url = base_url+f'?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start={i}&sz={pagination_size}'
             # Заходим на сайт
             driver.get(url)
 
