@@ -8,5 +8,5 @@ def scrape_images(url):
     parser_requests.get_photos(photo_urls[0],photo_urls[1])          # Сохраняет все фоотографии в папку imgs
 
 if __name__ == '__main__':
-    url = 'https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts'
+    url = 'https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204'
     scrape_images(url)
