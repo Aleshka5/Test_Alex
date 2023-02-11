@@ -15,18 +15,15 @@ I have been use Selenium instead request with this regard.<br>
 
 I have had experience with the Selenium lib, but I have never used proxy
 parameters for it. It is necessary, because the <a href="https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts">website</a> is banned in Russia. 
-
 Unfortunately, free proxies are useless, because there are internet speed
-is low. I rented my own IPv4 proxy server and it solved this problem. 
-
-But I had new difficulties, so my new proxy had the necessary authenticated procedure.
+is low. I rented my own IPv4 proxy server and it solved this problem. But I had new difficulties, so my new proxy had the necessary authenticated procedure.
 It was truly hard to solve this problem myself, so I found answer on the StackOverflow.
-I found this solution there and put it to a py module named "solve_authentication". 
+I found this solution there and put it to a "py." module named "solve_authentication". 
 Link to StackOverflow page is <a href="https://stackoverflow.com/questions/55582136/how-to-set-proxy-with-authentication-in-selenium-chromedriver-python">here</a>. 
 It helped me connect to needed website quickly enough.
 
 I understand how i can scrap all items from website, when I click to "View more".
-I looked to the address bar and saw that: " ...&start=128&sz=6 ".
+I looked to the address bar and saw that: " ...&start=64&sz=32 ".
 I find out that the start is - the start item index, and sz (size) is - the pagination size.<br>
 Also I find out that the website has anti-parsing system. Some requests was reject with this regard.
 Nevertheless I was able to increase number of successful connections. I made the requests at randomize 
@@ -42,7 +39,7 @@ using the BeautifulSoup lib. However, images in a HTML documents located in the 
 
 <h2>About parsing images with using the Requests</h2>
 
-In first, I create a request query to an url such as: <a href="https://www.rlmedia.io/is/image/PoloGSI/s7-1472168_alternate10?$plpDeskRFAlt$">https://www.rlmedia.io/is/image/PoloGSI/s7-1472168_alternate10?$plpDeskRFAlt$ </a>
+In first, I create a request query to an url such as: <a href="https://www.rlmedia.io/is/image/PoloGSI/s7-1472168_alternate10?$plpDeskRFAlt$">https://www.rlmedia.io/is/image/PoloGSI/s7-1472168_alternate10?$plpDeskRFAlt$ </a>.
 Then I extracted  content from it.
 
 When I tried to check images url, I found some identical images in pair. 
@@ -52,8 +49,7 @@ For example, it looks like this: <img src="https://github.com/Aleshka5/Test_Alex
 
 <h2>Part two</h2>
 
-You can see my code solution, which solves part two <a href="https://colab.research.google.com/drive/1x0qdfwX699XY3XLNFwEMtXva4kffl3mZ?usp=sharing">here</a>.<br>
-A little additional information about it.
+You can see my code solution, which solves part two is <a href="https://colab.research.google.com/drive/1x0qdfwX699XY3XLNFwEMtXva4kffl3mZ?usp=sharing">here</a>.<br>
 Results:<img src="https://github.com/Aleshka5/Test_Alex/blob/in_english/example_image_preprocessing.png" width = 100%>  
 
 <h2>Conclusion</h2> 
