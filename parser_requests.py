@@ -29,7 +29,7 @@ def get_photos(urls_humans,urls_clothes):
     # Прохождение по соответствующим изображениям
     for url_human,url_cloth in zip(urls_humans, urls_clothes):
 
-        # Just debug toolbar
+        # Прогресс бар
         if i % 5 == 0:
             print(f'Процесс сбора датасета: {round(((i + count_photos-index_bad_photos)/count_photos)*100,2)}%')
 
