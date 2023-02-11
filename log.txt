@@ -1,0 +1,641 @@
+C:\Users\Aleshka5\Desktop\Git_repos\Test_Alex\venv\Scripts\python.exe C:/Users/Aleshka5/Desktop/Git_repos/Test_Alex/main.py
+
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Safari/537.36
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=0&sz=32
+Done 32 out of 142.
+Waiting time for the next request: 0.93 min
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=32&sz=32
+Done 64 out of 142.
+Waiting time for the next request: 0.5 min
+Mozilla/5.0 (X11; Ubuntu; Linux i686 on x86_64; rv:49.0) Gecko/20100101 Firefox/49.0
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=64&sz=32
+Try again...
+Waiting time for the next request: 0.68 min
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 5.1; WOW64; Trident/6.0)
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=64&sz=32
+Try again...
+Waiting time for the next request: 0.93 min
+Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.3; Win64; x64; Trident/4.0)
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=64&sz=32
+Done 96 out of 142.
+Waiting time for the next request: 0.29 min
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=96&sz=32
+Try again...
+Waiting time for the next request: 1.18 min
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:46.0) Gecko/20100101 Firefox/46.0
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=96&sz=32
+Try again...
+Waiting time for the next request: 1.0 min
+Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=96&sz=32
+Done 128 out of 142.
+Waiting time for the next request: 0.32 min
+Mozilla/5.0 (Windows NT 6.2; rv:46.0) Gecko/20100101 Firefox/46.0
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=128&sz=14
+Try again...
+Waiting time for the next request: 1.12 min
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36
+https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start=128&sz=14
+Done 142 out of 142.
+The number of image urls: first_list - 139, second_list - 139
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 3.6%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 7.19%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 10.79%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 14.39%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 17.99%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 21.58%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 28.78%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 32.37%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 35.97%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 39.57%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 43.17%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+The percent of dataset collection: 43.88%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 47.48%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 51.08%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 55.4%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 59.71%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 65.47%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 69.06%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 72.66%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 76.26%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 80.58%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 84.17%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 87.77%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 91.37%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 94.96%
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+Images - identical
+Request completed successfully.
+First request status: 200
+Second request status: 200
+####################
+The percent of dataset collection: 100%
+
+Process finished with exit code 0

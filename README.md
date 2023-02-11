@@ -1,16 +1,60 @@
-<h1>Test_task1:scrapping images from the site</h1>
-<h2>Первые шаги</h2>
-Сначала чтобы получить данные с этого сайта я решил попробовать requests. Это было не актуально по двум причинам:<br>
-1) Сайт имеет динамическую подгрузку элементов разметки для своих товаров.<br>
-2) Для доступа на сайт нужно воспользоваться proxy (У меня это не вышло для данного сайта).<br>
-Исходя из этого появилась необходимость использовать Selenium как основной инструмент парсинга сайта.
-<h2>Про Selenium</h2>
-Я имел опыт работы с Selenium, но тут пришлось прикрутить к нему proxy сервер, так как <a href="https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts">сайт</a> заблокирован для нашего региона. К сожалению, из-за медленной скорости работы бесплатные варианты не подошли и мне пришлось арендовать IPv4 proxy на одном из сайтов.
-Осказалось, что у такого варианта есть свои сложности. Мой новый proxy имел необходимость в аунтификации. Достаточно тяжело самостоятельно написать решение этой проблемы, поэтому я обратился к StackOverfolw. Там я нашёл нужное мне решение, у меня оно находится в модуле solve_auntithication. Ссылка на это решение находится <a href="https://stackoverflow.com/questions/55582136/how-to-set-proxy-with-authentication-in-selenium-chromedriver-python">здесь</a>. Оно помогло мне достоточно быстро подключаться к нужному сайту.<br>
-Сам же сайт я понял как парсить, когда нажал на кнопку "Посмотреть больше" и заглянул в адресную строку. Там я увидел в конце строки следующее:" ...&start=128&sz=6 ". Оказалось Start - индекс элемента с которого выводятся товары, а sz (size) - колличество выводимых товаров начиная с start.<br>
-Однако сайт имеет не плохую систему защиты от ботов, по моему мнению. Из-за чего не каждый запрос на сайт проходил успешно. Однако мне удалось сильно увеличить количество удачных подключений, производя их через рандомизированные промежутки времени и генерируя различные headers.
-<h2>Парсинг HTML</h2>
-Изучая HTML разметку полученную с сайта я заметил, что все интересующие меня элементы хранятся в тегах "picture" с атрибутом tabindex="0". Это здорово упростило работу с BeautifulSoup. Однако в HTML хранятся не сами изображения, а ссылки на них в интернете, об этом в следующем разделе...
-<h2>Парсинг изображений с помощь requests</h2>
-Имея на руках ссылки на нужные изображения осалось обратиться по ним с помощью requests и получить из них content. Когда я стал обращаться по ссылкам я нашёл несколько фото, у которых фото в паре дублировались. Они были помечены специальным образом. Итого у меня вышло собрать датасет из 112 пар изображений.<br>
-Так, я справился с первой частью первого задания.
+<h1>Part one:scrapping images from the website</h1>
+<h2>Introduce</h2>
+If we want to read Russian version of this state go <a href="https://github.com/Aleshka5/Test_Alex">here</a>.
+<h2>First steps</h2>
+
+I started by trying to parse website source with use the request library.
+It was useless for two reasons:<br>
+<ol>
+<li> The website has dynamic HTML markup elements.</li>
+<li> I couldn't use proxy with a request lib to get this website. (I can usually do this)</li>
+</ol>
+I have been use Selenium instead request with this regard.<br>
+
+<h2>About parsing using the Selenium</h2>
+
+I have had experience with the Selenium lib, but I have never used proxy
+parameters for it. It is necessary, because the <a href="https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204?webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts">website</a> is banned in Russia. 
+
+Unfortunately, free proxies are useless, because there are internet speed
+is low. I rented my own IPv4 proxy server and it solved this problem. 
+
+But I had new difficulties, so my new proxy had the necessary authenticated procedure.
+It was truly hard to solve this problem myself, so I found answer on the StackOverflow.
+I found this solution there and put it to a py module named "solve_authentication". 
+Link to StackOverflow page is <a href="https://stackoverflow.com/questions/55582136/how-to-set-proxy-with-authentication-in-selenium-chromedriver-python">here</a>. 
+It helped me connect to needed website quickly enough.
+
+I understand how i can scrap all items from website, when I click to "View more".
+I looked to the address bar and saw that: " ...&start=128&sz=6 ".
+I find out that the start is - the start item index, and sz (size) is - the pagination size.<br>
+Also I find out that the website has anti-parsing system. Some requests was reject with this regard.
+Nevertheless I was able to increase number of successful connections. I made the requests at randomize 
+time and always generated random headers.<br>  
+
+<h2>About parsing HTML with BeautifulSoup</h2>
+
+When I checked the HTML documents, I find that all needed images located in the tag "picture"
+with an attribute named "tabindex", which has value equal "0".  
+
+I find images of the people wearing a particular cloth and the cloth itself 
+using the BeautifulSoup lib. However, images in a HTML documents located in the form of urls. 
+
+<h2>About parsing images with using the Requests</h2>
+
+In first, I create a request query to an url such as: <a href="https://www.rlmedia.io/is/image/PoloGSI/s7-1472168_alternate10?$plpDeskRFAlt$">https://www.rlmedia.io/is/image/PoloGSI/s7-1472168_alternate10?$plpDeskRFAlt$ </a>
+Then I extracted  content from it.
+
+When I tried to check images url, I found some identical images in pair. 
+These images were locate in the end of Dataset and were named such as: "bad_image".  
+Now I have dataset consisting of 122 correct image pairs.<br>
+For example, like that: <img src="",width = 50%>
+
+<h2>Part two</h2>
+
+You can see my code solution, which solves part two <a href="https://colab.research.google.com/drive/1x0qdfwX699XY3XLNFwEMtXva4kffl3mZ?usp=sharing">here</a>.<br>
+A little additional information about it.
+Results:<img src="", width = 100%>  
+
+<h2>Conclusion</h2> 
+

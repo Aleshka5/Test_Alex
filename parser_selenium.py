@@ -1,73 +1,90 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 
 import time
 import os
 import numpy as np
 
-from solve_auntithication import get_chromedriver
+from solve_authentication import get_chromedriver
 
-def parse_the_cite(url):
+def parse_the_cite(base_url, proxy_ip, proxy_port, use_new_proxi = False):
     """
-    Этот парсер работает напрямую с сайтом.
-    Его задача - получить все нужные HTML документы из интернета.
+    This parser works with website Ralph Lauren.
+    It task is - get all HTML documents from the website.
 
-    :param url: - url сайта, который мы парсим
-    :return: - None. Все данные сохраняются в папку template
+    :param url: - website url, which we parse
+    :return: - None. All data saves to folder "template"
 
     """
     if not os.path.exists('templates'):
         os.makedirs("templates")
 
-    i = 0 # Индекс стартового элемента для запроса
-    pagination_size = 32 # Колличество выводимых элементов на сайт
-    count_items = 134 # Всго страниц на сайте
+    # Index of the first element for the request
+    i = 0 # You can use 0 - 32 - 64 - 96 or 128 value to start function for different pages if you need
+
+    pagination_size = 32 # The number of items, which renders on the website
+    count_items = 142    # The number of all items on the website
     while i < count_items:
-        # Уменьшение пагинации для последнего запроса
+
+        # Decrease of pagination size for the last request
         if i + pagination_size > count_items:
             pagination_size -= i + pagination_size - count_items
 
-        # Поптыка запроса
+        # Try request using Selenium
         try:
-            # Аунтификация proxy
-            driver = get_chromedriver(use_proxy=True)
-            url = url+f'?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start={i}&sz={pagination_size}'
-            # Заходим на сайт
+            if not use_new_proxi:
+                # Proxy authentication
+                driver = get_chromedriver(use_proxy=True)
+            else:
+                path = os.path.dirname(os.path.abspath(__file__))
+                chrome_options = webdriver.ChromeOptions()
+                chrome_options.add_argument(f"--proxy-server={proxy_ip}:{proxy_port}")
+                driver = driver = webdriver.Chrome(service=Service(os.path.join(path, 'chromedriver')),
+                                                    options=chrome_options)
+
+            url = base_url + f'?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start={i}&sz={pagination_size}'
+            print(url)
+            # Get the website
             driver.get(url)
 
-            # Листаем его до footer
+
+            # Scroll down to see the footer
             actions = ActionChains(driver)
             actions.move_to_element(driver.find_element(webdriver.common.by.By.CLASS_NAME,'footer-container')).perform()
             time.sleep(1)
 
-            # Создание папки если необходимо
+            # Create a folder if not exists
             if not os.path.exists('templates'):
                 os.makedirs("templates")
 
-            # Сохраняем страницу
-            with open(f'templates/page{i}_{i + pagination_size}.html','w',encoding='utf-8') as file:
-                file.write(driver.page_source)
+            # Save a website page source
+            #with open(f'templates/page{i}_{i + pagination_size}.html','w',encoding='utf-8') as file:
+            #    file.write(driver.page_source)
             driver.close()
 
-            # Подготовка к новому запросу
+            # Preparing for new request
             i += pagination_size
-            print(f'Готово {i} из {count_items}.')
-            sleeping_time = round(0.5 + np.random.sample(), 2)
-            print(f'Время ожидания до следующего запроса: {sleeping_time} мин')
-            # Ожидание, чтобы не нагружать сайт
+            print(f'Done {i} out of {count_items}.')
+
+            # if we have next request, please wait for a while
             if i < count_items:
+                sleeping_time = round(0.2 + np.random.sample(), 2)
+                print(f'Waiting time for the next request: {sleeping_time} min')
                 time.sleep(sleeping_time*60)
 
-        except Exception as _ex: # Если сайт заподозрил, что-то неладное
-            print('Попробуем ещё раз...')
-            # Закрываем прошлую сессию
+        except Exception as _ex: # If we get incorrect data from website
+            print('Try again...')
+            # Close the last session
             driver.close()
 
-            # Ожидаем, чтобы не нагружать сайт
-            sleeping_time = round(0.5 + np.random.sample(), 2)
-            print(f'Время ожидания до следующего запроса: {sleeping_time} мин')
+            # Waiting time for the next request
             if i < count_items:
+                sleeping_time = round(0.7 + np.random.sample(), 2)
+                print(f'Waiting time for the next request: {sleeping_time} min')
                 time.sleep(sleeping_time * 60)
 
 if __name__ == '__main__':
-    parse_the_cite(url='https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204')
+    proxy_host = '135.181.14.45'
+    proxy_port = '5959'
+    parse_the_cite(base_url='https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204',proxy_ip=proxy_host,proxy_port=proxy_port,use_new_proxi = True)

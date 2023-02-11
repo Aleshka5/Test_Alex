@@ -3,32 +3,32 @@ from os import listdir
 
 def take_photo_urls():
     """
-    Этот парсер работает с HTML документами.
-    Его задача - найти нужные изображения в HTML разметке.
-
-    :return [first_urls_array, second_urls_array]: Возвращает два массива со ссылками
-    на изображения. В первом - ссылки на изображения одежды с людьми, во втором - без людей.
+    This parser works with HTML document.
+    It task is - search for the needed images in a HTML document.
+    :return [first_urls_array, second_urls_array]: Returns two lists with links to images inside.
+    first_urls_array - links to images of the people wearing a particular cloth,
+    second_urls_array - links to images of the cloths.
 
     """
-    # Получаем все полученные с предыдущего пункта HTML документы
+    # Find all the parsed HTML documents
     only_htmls = [file for file in listdir('templates') if bool('.html' in file)]
 
-    # Проверяем наличие лишних файлов в директории
+    # Clear the array of empty items
     if len(only_htmls) == 0:
         return [[],[]]
 
-    urls_h = []  # Массив (List) для фото с людьми
-    urls_cl = [] # Массив для фото без людей
+    urls_h = []  # images of the people wearing a particular cloth
+    urls_cl = [] # images of the cloths
 
-    # Проходим по всем документам
+    # Find the urls of the images
     for file in only_htmls:
         with open('templates/'+file,'r') as html_text:
             soup = BeautifulSoup(html_text, 'html.parser')
-            for parent in soup.find_all('picture', tabindex='0'): # Получаем все теги <picture>
-                urls_h.append(parent.findChildren("source", media="(min-width: 768px)")[0]['srcset']) # Ссылки на нужные фото с людьми
-                urls_cl.append(parent.findChildren("img", tabindex='0')[0]['src']) # Ссылки на нужные фото одежды без людей
-    print(len(urls_h),len(urls_cl))
-    assert  len(urls_h) == len(urls_cl) # Проверка что все фото имеют пару (Не защищает от дублирований)
+            for parent in soup.find_all('picture', tabindex='0'): # Take all tags <picture>
+                urls_h.append(parent.findChildren("source", media="(min-width: 768px)")[0]['srcset'])
+                urls_cl.append(parent.findChildren("img", tabindex='0')[0]['src'])
+    print(f'The number of image urls: first_list - {len(urls_h)}, second_list - {len(urls_cl)}')
+    assert  len(urls_h) == len(urls_cl) # Make sure that all images have pairs
     return [urls_h,urls_cl]
 
 if __name__ == '__main__':

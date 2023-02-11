@@ -7,10 +7,13 @@ from user_agent import generate_user_agent
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
+#                   PROXY CONFIGURATION
+# ========================================================
 PROXY_HOST = '185.126.67.130'  # rotating proxy or host
 PROXY_PORT = 8000 # port
 PROXY_USER = 'eDyKx5' # username
 PROXY_PASS = 'MjtSEa' # password
+# ========================================================
 
 manifest_json = """
 {
