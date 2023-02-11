@@ -1,6 +1,6 @@
 <h1>Part one:scrapping images from the website</h1>
 <h2>Introduce</h2>
-If we want to read Russian version of this state go <a href="https://github.com/Aleshka5/Test_Alex">here</a>.
+If you would like to read Russian version of this state go <a href="https://github.com/Aleshka5/Test_Alex">there</a>.
 <h2>First steps</h2>
 
 I started by trying to parse website source with use the request library.
@@ -48,13 +48,13 @@ Then I extracted  content from it.
 When I tried to check images url, I found some identical images in pair. 
 These images were locate in the end of Dataset and were named such as: "bad_image".  
 Now I have dataset consisting of 122 correct image pairs.<br>
-For example, like that: <img src="",width = 50%>
+For example, it looks like this: <img src="https://github.com/Aleshka5/Test_Alex/blob/in_english/example_image_pair.JPG" width = 70%>
 
 <h2>Part two</h2>
 
 You can see my code solution, which solves part two <a href="https://colab.research.google.com/drive/1x0qdfwX699XY3XLNFwEMtXva4kffl3mZ?usp=sharing">here</a>.<br>
 A little additional information about it.
-Results:<img src="", width = 100%>  
+Results:<img src="https://github.com/Aleshka5/Test_Alex/blob/in_english/example_image_preprocessing.png" width = 100%>  
 
 <h2>Conclusion</h2> 
-
+I done the task and translate my documentation on two languages. I am truly spent a lot of the project time to translate all this, because the main code was done about one day. It was an interesting experience. I am waiting for your feedback.
