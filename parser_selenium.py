@@ -51,11 +51,11 @@ def parse_the_cite(base_url):
 
             # Подготовка к новому запросу
             i += pagination_size
-            print(f'Готово {i} из {count_items}.')
-            sleeping_time = round(0.5 + np.random.sample(), 2)
-            print(f'Время ожидания до следующего запроса: {sleeping_time} мин')
+            print(f'Готово {i} из {count_items}.')            
             # Ожидание, чтобы не нагружать сайт
             if i < count_items:
+                sleeping_time = round(0.5 + np.random.sample(), 2)
+                print(f'Время ожидания до следующего запроса: {sleeping_time} мин')
                 time.sleep(sleeping_time*60)
 
         except Exception as _ex: # Если сайт заподозрил, что-то неладное
@@ -63,11 +63,11 @@ def parse_the_cite(base_url):
             # Закрываем прошлую сессию
             driver.close()
 
-            # Ожидаем, чтобы не нагружать сайт
-            sleeping_time = round(0.5 + np.random.sample(), 2)
-            print(f'Время ожидания до следующего запроса: {sleeping_time} мин')
+            # Ожидаем, чтобы не нагружать сайт            
             if i < count_items:
+                sleeping_time = round(0.5 + np.random.sample(), 2)
+                print(f'Время ожидания до следующего запроса: {sleeping_time} мин')
                 time.sleep(sleeping_time * 60)
 
 if __name__ == '__main__':
-    parse_the_cite(url='https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204')
+    parse_the_cite('https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204')
