@@ -8,7 +8,7 @@ import numpy as np
 
 from solve_authentication import get_chromedriver
 
-def parse_the_cite(base_url, proxy_ip, proxy_port, use_new_proxi = False):
+def parse_the_cite(base_url):
     """
     This parser works with website Ralph Lauren.
     It task is - get all HTML documents from the website.
@@ -32,17 +32,9 @@ def parse_the_cite(base_url, proxy_ip, proxy_port, use_new_proxi = False):
             pagination_size -= i + pagination_size - count_items
 
         # Try request using Selenium
-        try:
-            if not use_new_proxi:
-                # Proxy authentication
-                driver = get_chromedriver(use_proxy=True)
-            else:
-                path = os.path.dirname(os.path.abspath(__file__))
-                chrome_options = webdriver.ChromeOptions()
-                chrome_options.add_argument(f"--proxy-server={proxy_ip}:{proxy_port}")
-                driver = driver = webdriver.Chrome(service=Service(os.path.join(path, 'chromedriver')),
-                                                    options=chrome_options)
-
+        try:            
+            # Proxy authentication
+            driver = get_chromedriver(use_proxy=True)
             url = base_url + f'?sw1=sw-cache-me&webcat=men%7Cclothing%7Cmen-clothing-hoodies-sweatshirts&start={i}&sz={pagination_size}'
             print(url)
             # Get the website
@@ -59,8 +51,8 @@ def parse_the_cite(base_url, proxy_ip, proxy_port, use_new_proxi = False):
                 os.makedirs("templates")
 
             # Save a website page source
-            #with open(f'templates/page{i}_{i + pagination_size}.html','w',encoding='utf-8') as file:
-            #    file.write(driver.page_source)
+            with open(f'templates/page{i}_{i + pagination_size}.html','w',encoding='utf-8') as file:
+                file.write(driver.page_source)
             driver.close()
 
             # Preparing for new request
@@ -85,6 +77,4 @@ def parse_the_cite(base_url, proxy_ip, proxy_port, use_new_proxi = False):
                 time.sleep(sleeping_time * 60)
 
 if __name__ == '__main__':
-    proxy_host = '135.181.14.45'
-    proxy_port = '5959'
-    parse_the_cite(base_url='https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204',proxy_ip=proxy_host,proxy_port=proxy_port,use_new_proxi = True)
+    parse_the_cite(base_url='https://www.ralphlauren.nl/en/men/clothing/hoodies-sweatshirts/10204')
