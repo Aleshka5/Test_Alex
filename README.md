@@ -2,7 +2,7 @@
 <h2>Introduce</h2>
 If you would like to read Russian version of this state go <a href="https://github.com/Aleshka5/Test_Alex">there</a>.
 
-Also if you want to run this code you can look <a href="https://github.com/Aleshka5/Test_Alex/blob/in_english/parsing_run.ipynb">here</a>.
+Also if you want to run this code locally you can look <a href="https://github.com/Aleshka5/Test_Alex/blob/in_english/parsing_run.ipynb">here</a>.
 <h2>First steps</h2>
 
 I started by trying to parse website source with use the request library.
