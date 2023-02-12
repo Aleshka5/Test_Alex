@@ -38,11 +38,7 @@ def parse_the_cite(base_url):
             # Листаем его до footer
             actions = ActionChains(driver)
             actions.move_to_element(driver.find_element(webdriver.common.by.By.CLASS_NAME,'footer-container')).perform()
-            time.sleep(1)
-
-            # Создание папки если необходимо
-            if not os.path.exists('templates'):
-                os.makedirs("templates")
+            time.sleep(1)            
 
             # Сохраняем страницу
             with open(f'templates/page{i}_{i + pagination_size}.html','w',encoding='utf-8') as file:
