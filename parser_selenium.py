@@ -21,7 +21,7 @@ def parse_the_cite(base_url):
 
     i = 0 # Индекс стартового элемента для запроса
     pagination_size = 32 # Колличество выводимых элементов на сайт
-    count_items = 134 # Всго страниц на сайте
+    count_items = 141 # Всго страниц на сайте
     while i < count_items:
         # Уменьшение пагинации для последнего запроса
         if i + pagination_size > count_items:
